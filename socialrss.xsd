@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://socialrss.org/schemas/socialrss/1.0"
+    xmlns="http://socialrss.org/schemas/socialrss/1.0"
+    elementFormDefault="qualified">
+
+	<xsd:annotation>
+		<xsd:documentation>
+    XML Schema for the Social RSS Podcasts extension.
+
+    Help Center documentation for the Social RSS Podcasts extension:
+
+    URL Here
+
+    Copyright 2018 Guilherme Dellagustin All Rights Reserved.
+		</xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:element name="email" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>
+      Main contact email of the podcast. The email is
+      specified in the &lt;channel&gt; tag.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="handleType">
+		<xsd:annotation>
+			<xsd:documentation>
+    Handle for a social network.
+    Multiple handles can be specified in the &lt;channel&gt; tag, &lt;item&gt; tag
+    and &lt;participant&gt; tag
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="type" type="xsd:string" use="required"/>
+				<xsd:attribute name="url" type="xsd:string"/>
+				<xsd:attribute name="text" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:element name="handle" type="handleType"/>
+
+	<xsd:element name="hashtag" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>
+    Multiple hashtags can be specified in the &lt;channel&gt; tag or &lt;item&gt; tag.
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:element name="donation">
+		<xsd:annotation>
+			<xsd:documentation>
+    Handle for a donation or crowdsourcing platform.
+    Multiple handles can be specified in the &lt;channel&gt; tag.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="type" type="xsd:string" use="required"/>
+					<xsd:attribute name="url" type="xsd:string"/>
+					<xsd:attribute name="text" type="xsd:string"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="disqus">
+		<xsd:annotation>
+			<xsd:documentation>
+    Information about the disqus reference for the episode.
+    Exaclty one &lt;disqus&gt; tag can be specified in the &lt;item&gt; tag.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="shortname" type="xsd:string" use="required"/>
+					<xsd:attribute name="page_url" type="xsd:string" use="required"/>
+					<xsd:attribute name="page_identifier" type="xsd:string" use="required"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="participantReference">
+		<xsd:annotation>
+			<xsd:documentation>
+    Reference to a participant declared in the &lt;channel&gt; tag.
+    Multiple references can be specified in the &lt;item&gt; tag.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute name="id" type="xsd:string" use="required"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="participant">
+		<xsd:annotation>
+			<xsd:documentation>
+      Defines a participant. Participants can be specified in the &lt;channel&gt; tag or &lt;item&gt; tag.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="email" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="handle" type="handleType" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="permanent" type="xsd:boolean"/>
+			<xsd:attribute name="id" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>
