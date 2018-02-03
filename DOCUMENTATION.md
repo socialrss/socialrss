@@ -33,13 +33,15 @@ in a generic manner to still provide some usability.
 
 | Type               | Description          | Additional information                                  |
 |--------------------|----------------------|---------------------------------------------------------|
-| twitter            | Twitter account      | Intended for use under `<channel>` and `<participants>` |
+| twitter            | Twitter account      | Intended for use under `<channel>` and `<participant>`  |
 | twitter.tweet      | Tweet                | Intended for use under `<item>`                         |
 | facebook           | Facebook profile     | Intended for use under `<participant>`                  |
 | facebook.page      | Facebook page        | Intended for use under `<channel>`                      |
 | facebook.group     | Facebook group       | Intended for use under `<channel>`                      |
-| instagram          | Instagram            | Intended for use under `<channel>` and `<participants>` |
-| telegram           | Telegram group       | Intended for use under `<channel>`                      |
+| instagram          | Instagram            | Intended for use under `<channel>` and `<participant>`  |
+| telegram           | Telegram user        | Intended for use under `<participant>`                  |
+| telegram.group     | Telegram group       | Intended for use under `<channel>`                      |
+| youtube.channel    | Youtube channel      | Intended for use under `<channel>` and `<participant>`  |
 
 ## `<hashtag>` tag
 
@@ -48,9 +50,9 @@ It can be specified in the `<channel>` or `<item>` tags.
 
 ## `<donation>` tag
 
-The `<donation>` tag is used for handles of donation or crowdsourcing platforms, including
+The `<crowdfunding>` tag is used for handles of donation or crowdfunding platforms, including
 cryptocurrency wallet addresses.  
-The `<donation>`tag can be specified in the `<channel>` tag.
+The `<crowdfunding>`tag can be specified in the `<channel>` tag.
 
 ### Examples
 
@@ -80,13 +82,15 @@ in a generic manner to still provide some usability.
 
 #### Reserved types
 
-| Type               | Description           |
-|--------------------|-----------------------|
-| wallet.`<currency>`| Cryptocurrency wallet |
-| paypal             | Paypal                |
-| patreon            | Patreon               |
-| apoiase            | Apoia.se              |
-| padrim             | Padrim                |
+| Type               | Description                                             |
+|--------------------|---------------------------------------------------------|
+| wallet.`<currency>`| Cryptocurrency wallet                                   |
+| paypal             | [Paypal](https://paypal.com)                            |
+| patreon            | [Patreon](https://patreon.com)                          |
+| apoiase            | [Apoia.se](https://apoia.se)                            |
+| padrim             | [Padrim](https://www.padrim.com.br)                     |
+| pagseguro          | [PagSeguro](https://pagseguro.com.br)                   |
+| picpay             | [PicPay](https://www.picpay.com)                        |
 
 ## `<participant>` tag
 

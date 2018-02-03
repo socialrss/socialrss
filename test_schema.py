@@ -31,12 +31,12 @@ class TestSchema(unittest.TestCase):
         valid_xml = '<social:handle xmlns:social="http://socialrss.org/schemas/socialrss/1.0" type="type" url="url" text="text">handle</social:handle>'
         self.assertTrue(self.is_valid(valid_xml))
 
-    def test_invalid_donation_without_type(self):
-        invalid_xml = '<social:donation xmlns:social="http://socialrss.org/schemas/socialrss/1.0">handler</social:donation>'
+    def test_invalid_crowdfunding_without_type(self):
+        invalid_xml = '<social:crowdfunding xmlns:social="http://socialrss.org/schemas/socialrss/1.0">handler</social:crowdfunding>'
         self.assertFalse(self.is_valid(invalid_xml))
 
-    def test_valid_donation_with_url_and_text(self):
-        valid_xml = '<social:donation xmlns:social="http://socialrss.org/schemas/socialrss/1.0" type="type" url="url" text="text">handle</social:donation>'
+    def test_valid_crowdfunding_with_url_and_text(self):
+        valid_xml = '<social:crowdfunding xmlns:social="http://socialrss.org/schemas/socialrss/1.0" type="type" url="url" text="text">handle</social:crowdfunding>'
         self.assertTrue(self.is_valid(valid_xml))
 
     def test_invalid_participant_simple_without_name(self):

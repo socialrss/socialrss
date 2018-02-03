@@ -53,10 +53,10 @@
 		</xsd:annotation>
 	</xsd:element>
 
-	<xsd:element name="donation">
+	<xsd:element name="crowdfunding">
 		<xsd:annotation>
 			<xsd:documentation>
-    Handle for a donation or crowdsourcing platform.
+    Handle for a donation or crowdfunding platform.
     Multiple handles can be specified in the &lt;channel&gt; tag.
 			</xsd:documentation>
 		</xsd:annotation>
