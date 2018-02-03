@@ -48,7 +48,7 @@ in a generic manner to still provide some usability.
 The `<hashtag>` tag is used to add hashtags to the podcast or episodes.  
 It can be specified in the `<channel>` or `<item>` tags.
 
-## `<donation>` tag
+## `<crowdfunding>` tag
 
 The `<crowdfunding>` tag is used for handles of donation or crowdfunding platforms, including
 cryptocurrency wallet addresses.  
