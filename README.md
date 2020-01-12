@@ -1,20 +1,21 @@
-# Social RSS
+# Social RSS Specification
 
 Social RSS is an extension for RSS feeds that adds social network information.
+For more information about this project, check the [about](https://github.com/socialrss/about) repository.
 
-Podcast aggregators can use this information for better integration with
-social networks.
+This repository holds the **Social RSS specification**, which is comprised of:
+* A _XML Schema (XSD)_ defining the RSS XML extension - [`socialrss.xsd`](./socialrss.xsd)
+* Extendend documentation in form of a Markdown file - [`DOCUMENTATION.md`](./DOCUMENTATION.md)
+* Automated tests (which doubles as documentation) - See the section _Automated testing_ on this document
 
-The current version of Social RSS includes
+## Scope 
 
-* tags for the podcast and participants social networks
+The current version of Social RSS includes:
+
+* tags for the podcast and participants social networks and contacts
 * tags for hashtags
-* tags for for donation and crowdsourcing platforms
+* tags for for donation and crowdsourcing platforms (funding)
 * tags for disqus threads
-
-## Documentation
-
-For the full documentation, refer to [DOCUMENTATION.md](DOCUMENTATION.md).
 
 ## Example
 
@@ -92,6 +93,11 @@ For the full documentation, refer to [DOCUMENTATION.md](DOCUMENTATION.md).
 
 The versioning process for this specification is still not well defined.
 This is a major task and it will be tracked with [issue #5](https://github.com/socialrss/socialrss/issues/5).
+
+## Automated testing
+
+This project containts a Python script (`test_schema.py`) to test the XML Schema agains sample XML Snippets.
+For more information on automated testing roadmap and open issues for this project, check the issues with the label [`auto-test`](https://github.com/socialrss/socialrss/labels/auto-tests).
 
 ## Contributing to Social RSS
 
