@@ -87,3 +87,16 @@ For the full documentation, refer to [DOCUMENTATION.md](DOCUMENTATION.md).
 	</channel>
 </rss>
 ```
+
+## Versioning
+
+The versioning process for this specification is still not well defined.
+This is a major task and it will be tracked with [issue #5](https://github.com/socialrss/socialrss/issues/5).
+
+## Contributing to Social RSS
+
+You will find general contribution guidelines [here](https://github.com/socialrss/.github/blob/master/CONTRIBUTING.md).
+
+## Feature request, Support and Feedback
+
+You will find information on general feature request, support and feedback processes [here](https://github.com/socialrss/.github/blob/master/SUPPORT.md).
